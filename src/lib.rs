@@ -1,3 +1,6 @@
+//! # minigrep
+//!
+//! minigrep is a mini grep
 use std::fs::File;
 use std::io::prelude::*;
 use std::error::Error;
@@ -29,6 +32,14 @@ impl Config {
     }
 }
 
+/// run
+/// 
+/// # Examples
+///
+/// ```
+/// run(aaa)
+/// 
+/// ``` 
 pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
     let mut f = File::open(config.filename)?;
 
